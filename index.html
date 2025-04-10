@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday, Bestie!</title>
+  <title>Happy Birthday, Friend!</title>
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #1abc9c;
+      background: #2c3e50;
       font-family: Arial, sans-serif;
       text-align: center;
-      color: #fff;
+      color: #ecf0f1;
       height: 100vh;
       overflow-x: hidden;
       overflow-y: auto;
@@ -23,8 +23,8 @@
 
     h1 {
       font-size: 3.5em;
-      color: #f1c40f;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+      color: #ff66b2;
+      text-shadow: 2px 2px 10px rgba(255, 102, 178, 0.6);
       margin-top: 20px;
     }
 
@@ -32,7 +32,7 @@
       margin-top: 10px;
       font-size: 1em;
       padding: 10px 15px;
-      background: #f39c12;
+      background: #ff66b2;
       color: white;
       border: none;
       border-radius: 5px;
@@ -49,7 +49,7 @@
     }
 
     .countdown div {
-      background-color: #16a085;
+      background-color: #34495e;
       color: white;
       font-size: 1.5em;
       font-weight: bold;
@@ -62,7 +62,7 @@
     .countdown p {
       margin: 0;
       font-size: 0.8em;
-      color: #f1c40f;
+      color: #ff66b2;
     }
 
     .message-box {
@@ -72,55 +72,13 @@
 
     .quote {
       font-style: italic;
-      font-size: 1.3em;
-      color: #ffeaa7;
+      font-size: 1.5em;
+      color: #ff6347;
       margin: 10px 0;
     }
 
     .quote:nth-child(even) {
-      color: #fab1a0;
-    }
-
-    .popup-message {
-      display: none;
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      padding: 30px;
-      border-radius: 10px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 9999;
-      max-width: 80%;
-    }
-
-    .popup-message button {
-      background: #f39c12;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1.2em;
-    }
-
-    .popup-message button:hover {
-      background: #e67e22;
-    }
-
-    .confetti {
-      font-size: 2.5em;
-      animation: floatUp 5s ease-in-out infinite;
-      position: absolute;
-      bottom: -50px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    @keyframes floatUp {
-      0% { bottom: -50px; }
-      100% { bottom: 100%; }
+      color: #ffcc00;
     }
 
     .photo-gallery img,
@@ -131,17 +89,11 @@
       object-fit: cover;
       border-radius: 15px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      transition: transform 0.3s ease;
     }
 
-    .photo-gallery img:hover,
-    .cake-display img:hover {
-      transform: scale(1.1);
-    }
-
-    .birthday-card, .memory-wall {
+    .birthday-card, .memory-wall, .rose-garden {
       margin-top: 40px;
-      background: #16a085;
+      background: #34495e;
       padding: 20px;
       border-radius: 10px;
       animation: fadeIn 2s ease-in-out;
@@ -149,8 +101,8 @@
       max-width: 800px;
     }
 
-    .birthday-card h2, .memory-wall h2 {
-      color: #f1c40f;
+    .birthday-card h2, .memory-wall h2, .rose-garden h2 {
+      color: #ff66b2;
       font-size: 2.5em;
       margin-bottom: 10px;
     }
@@ -159,6 +111,11 @@
       color: #ecf0f1;
       font-size: 1.2em;
       line-height: 1.5;
+    }
+
+    .rose-garden p {
+      color: #ffcc00;
+      font-size: 1.3em;
     }
 
     @keyframes fadeIn {
@@ -171,30 +128,20 @@
       width: 80%;
       max-width: 600px;
       border-radius: 15px;
-      transition: transform 0.3s ease;
-    }
-
-    .video-message video:hover {
-      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
-  <h1>Happy Birthday, Bestie!🎉</h1>
+  <h1>Happy Birthday, Friend!🎉</h1>
 
+  <!-- Background Music -->
   <audio id="background-music" autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-smile.mp3" type="audio/mpeg">
+    <source src="https://www.bensound.com/bensound-music/bensound-happyrock.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
   <button class="music-toggle" onclick="toggleMusic()">Play/Pause Music</button>
-
-  <select onchange="changeMusic(this.value)">
-    <option value="https://www.bensound.com/bensound-music/bensound-smile.mp3">Smile</option>
-    <option value="https://www.bensound.com/bensound-music/bensound-happyrock.mp3">Happy Rock</option>
-    <option value="https://www.bensound.com/bensound-music/bensound-buddy.mp3">Buddy</option>
-  </select>
 
   <div class="countdown">
     <div>
@@ -216,68 +163,54 @@
   </div>
 
   <div class="message-box">
-    <p><strong>Messages for You:</strong></p>
-    <p class="quote">"You're not just a friend, you're family."</p>
-    <p class="quote">"Wishing you endless laughter and unforgettable memories!"</p>
+    <p><strong>Wishes for You:</strong></p>
+    <p class="quote">"Wishing you joy, love, and cake today!"</p>
+    <p class="quote">"Friends like you make life sweeter!"</p>
   </div>
-
-  <div class="popup-message" id="popupMessage">
-    <h1>Happy Birthday, Bestie!</h1>
-    <button onclick="closePopup()">Close</button>
-  </div>
-
-  <div class="confetti" onclick="pauseAnimation('confetti')">🎊</div>
 
   <div class="cake-display">
     <h2>Your Birthday Cake</h2>
-    <img src="https://i.ibb.co/zTqM63JL/premium-photo-1663839412026-51a44cfadfb8.jpg" alt="Birthday Cake">
+    <img src="https://i.ibb.co/ZzjVhYWc/Screenshot-20250206-204245-2.png" alt="Birthday Cake">
   </div>
 
   <div class="video-message">
-    <h2>Special Video Just for You!</h2>
+    <h2>Special Video</h2>
     <video controls>
-      <source src="your-friend-video.mp4" type="video/mp4">
+      <source src="https://media-hosting.imagekit.io/9683773059214520/2025-02-10-163059830.mp4?Expires=1838879643&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=YeBKa-T1cz7yYvnMwJUk-90z8O2DFvdm-7m5SHmdgSMCmXqH9MmZuHtR80VHp3Rk3-iNmy1rxYKD63VxOD42MZCiGM8kscq~do86TVTovwfNHvVpH1lMQpIvaoVWSM45EsNOmbpQCtmlrGQIdqw1OudZ0zorcWmuDWSpOaU5-faRMeVtHE5XP0YTjDG4CvJZh1b~ZQpiMUOK7nd7zkbFXSnzvoqs6kzY7WSv~KhMRxEc9yn-1VkDL6a5Z3UKrTYNEGye-Hu9G352pqYGA8jB9BmHhLbbJ4fqhKF3SOZYrUpyZGafiekfxJlafL0C~Fyp~svHcPGqRSHgmtCs-ZuWgw__" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
 
   <div class="photo-gallery">
-    <h2>Memories Together</h2>
-    <img src="your-photo1.jpg" alt="Photo 1">
-    <img src="your-photo2.jpg" alt="Photo 2">
-    <img src="your-photo3.jpg" alt="Photo 3">
+    <h2>Friend Moments</h2>
+    <img src="https://i.ibb.co/dwYRJcNn/a0aa7e091fff4634c2b64a40ea72b867.webp" alt="Friend Photo 1">
+    <img src="https://i.ibb.co/vCKYq5c1/IMG-20250219-WA0026.jpg" alt="Friend Photo 2">
   </div>
 
   <div class="birthday-card">
-    <h2>Birthday Message</h2>
-    <p>"May your birthday be filled with laughter, joy, and all your favorite things!"</p>
+    <h2>Birthday Card</h2>
+    <p>"May your birthday be filled with sunshine, smiles, and sweet surprises!"</p>
   </div>
 
   <div class="memory-wall">
-    <h2>Friendship Memories</h2>
-    <p>"Remember our crazy adventures and late-night talks?"</p>
-    <p>"Here's to many more years of friendship!"</p>
+    <h2>Memory Wall</h2>
+    <p>"From laughs to long talks, every moment with you is a treasure."</p>
+    <p>"Here's to making more beautiful memories together!"</p>
+  </div>
+
+  <div class="rose-garden">
+    <h2>Virtual Rose Garden</h2>
+    <p>Sending you love and virtual roses on your special day!</p>
   </div>
 
   <script>
     function toggleMusic() {
       const music = document.getElementById("background-music");
-      music.paused ? music.play() : music.pause();
-    }
-
-    function changeMusic(url) {
-      const music = document.getElementById("background-music");
-      music.src = url;
-      music.play();
-    }
-
-    function pauseAnimation(className) {
-      const el = document.querySelector(`.${className}`);
-      el.style.animationPlayState = el.style.animationPlayState === 'paused' ? 'running' : 'paused';
-    }
-
-    function closePopup() {
-      document.getElementById("popupMessage").style.display = "none";
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
     }
 
     function updateCountdown() {
