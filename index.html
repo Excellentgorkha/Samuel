@@ -8,7 +8,8 @@
     body {
       margin: 0;
       padding: 0;
-      background: #2c3e50;
+      background: url('https://i.ibb.co/3rHqVZR/happy-birthday-background.jpg') no-repeat center center fixed;
+      background-size: cover;
       font-family: Arial, sans-serif;
       text-align: center;
       color: #ecf0f1;
@@ -49,7 +50,7 @@
     }
 
     .countdown div {
-      background-color: #34495e;
+      background-color: rgba(52, 152, 219, 0.8);
       color: white;
       font-size: 1.5em;
       font-weight: bold;
@@ -125,7 +126,7 @@
 
     .birthday-card, .memory-wall {
       margin-top: 40px;
-      background: #34495e;
+      background: rgba(44, 62, 80, 0.8);
       padding: 20px;
       border-radius: 10px;
       animation: fadeIn 2s ease-in-out;
@@ -167,7 +168,7 @@
 
   <h1>Happy Birthday, My Friend!🎉🎂🎈</h1>
 
-  <!-- Happy Birthday Music -->
+  <!-- Background Music -->
   <audio id="background-music" autoplay loop>
     <source src="https://cdn.pixabay.com/download/audio/2023/01/05/audio_d3b130a444.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -198,6 +199,7 @@
     <p><strong>Your Love Notes:</strong></p>
     <p class="quote">"You're the best friend I could ask for!"</p>
     <p class="quote">"Every moment with you is a memory to cherish."</p>
+    <p class="quote">"Here's to another year of laughter, adventures, and memories!"</p>
   </div>
 
   <div class="popup-message" id="popupMessage">
@@ -205,6 +207,7 @@
     <button onclick="closePopup()">Close</button>
   </div>
 
+  <!-- Cake Image Section -->
   <div class="cake-display">
     <h2>Your Special Cake</h2>
     <img src="https://i.ibb.co/ZzjVhYWc/Screenshot-20250206-204245-2.png" alt="Birthday Cake">
@@ -216,6 +219,18 @@
       <source src="https://media-hosting.imagekit.io/9683773059214520/2025-02-10-163059830.mp4?Expires=1838879643&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=YeBKa-T1cz7yYvnMwJUk-90z8O2DFvdm-7m5SHmdgSMCmXqH9MmZuHtR80VHp3Rk3-iNmy1rxYKD63VxOD42MZCiGM8kscq~do86TVTovwfNHvVpH1lMQpIvaoVWSM45EsNOmbpQCtmlrGQIdqw1OudZ0zorcWmuDWSpOaU5-faRMeVtHE5XP0YTjDG4CvJZh1b~ZQpiMUOK7nd7zkbFXSnzvoqs6kzY7WSv~KhMRxEc9yn-1VkDL6a5Z3UKrTYNEGye-Hu9G352pqYGA8jB9BmHhLbbJ4fqhKF3SOZYrUpyZGafiekfxJlafL0C~Fyp~svHcPGqRSHgmtCs-ZuWgw__" type="video/mp4">
       Your browser does not support the video tag.
     </video>
+  </div>
+
+  <!-- Birthday Card -->
+  <div class="birthday-card">
+    <h2>Special Birthday Card</h2>
+    <p>May your birthday be filled with love, laughter, and all things that bring you happiness!</p>
+  </div>
+
+  <!-- Memory Wall -->
+  <div class="memory-wall">
+    <h2>Memory Wall</h2>
+    <p>We have shared so many beautiful memories together. Looking forward to making many more in the years to come!</p>
   </div>
 
   <script>
