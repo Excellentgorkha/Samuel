@@ -109,40 +109,6 @@
       background: #ff3385;
     }
 
-    .heart, .rose, .balloon {
-      font-size: 3em;
-      position: absolute;
-      bottom: -50px;
-      left: 50%;
-      transform: translateX(-50%);
-      animation: floatUp 5s ease-in-out infinite;
-      pointer-events: none;
-    }
-
-    .heart {
-      color: red;
-      animation: rotateHeart 10s infinite linear;
-    }
-
-    .rose {
-      color: #ff6347;
-    }
-
-    .balloon {
-      color: #ff66b2;
-    }
-
-    @keyframes rotateHeart {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
-    @keyframes floatUp {
-      0% { bottom: -50px; }
-      100% { bottom: 100%; }
-    }
-
-    .photo-gallery img,
     .cake-display img {
       margin: 10px;
       width: 250px;
@@ -153,7 +119,6 @@
       transition: transform 0.3s ease;
     }
 
-    .photo-gallery img:hover,
     .cake-display img:hover {
       transform: scale(1.1);
     }
@@ -200,7 +165,7 @@
 </head>
 <body>
 
-  <h1>Happy Birthday, My Friend!🎉🎂</h1>
+  <h1>Happy Birthday, My Friend!🎉🎂🎈</h1>
 
   <!-- Happy Birthday Music -->
   <audio id="background-music" autoplay loop>
@@ -230,19 +195,15 @@
   </div>
 
   <div class="message-box">
-    <p><strong>Dear Friend:</strong></p>
-    <p class="quote">"May your birthday be full of love and laughter!"</p>
-    <p class="quote">"You're a blessing in everyone's life."</p>
+    <p><strong>Your Love Notes:</strong></p>
+    <p class="quote">"You're the best friend I could ask for!"</p>
+    <p class="quote">"Every moment with you is a memory to cherish."</p>
   </div>
 
   <div class="popup-message" id="popupMessage">
-    <strong><h1>Happy Birthday, my friend!🎉</h1></strong>
+    <h1>Happy Birthday, my friend!🎉🎂🎈</h1>
     <button onclick="closePopup()">Close</button>
   </div>
-
-  <div class="heart">❤️</div>
-  <div class="rose">🌹</div>
-  <div class="balloon">🎈</div>
 
   <div class="cake-display">
     <h2>Your Special Cake</h2>
@@ -250,28 +211,11 @@
   </div>
 
   <div class="video-message">
-    <h2>Special Video</h2>
+    <h2>Watch this special video for you!</h2>
     <video controls>
       <source src="https://media-hosting.imagekit.io/9683773059214520/2025-02-10-163059830.mp4?Expires=1838879643&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=YeBKa-T1cz7yYvnMwJUk-90z8O2DFvdm-7m5SHmdgSMCmXqH9MmZuHtR80VHp3Rk3-iNmy1rxYKD63VxOD42MZCiGM8kscq~do86TVTovwfNHvVpH1lMQpIvaoVWSM45EsNOmbpQCtmlrGQIdqw1OudZ0zorcWmuDWSpOaU5-faRMeVtHE5XP0YTjDG4CvJZh1b~ZQpiMUOK7nd7zkbFXSnzvoqs6kzY7WSv~KhMRxEc9yn-1VkDL6a5Z3UKrTYNEGye-Hu9G352pqYGA8jB9BmHhLbbJ4fqhKF3SOZYrUpyZGafiekfxJlafL0C~Fyp~svHcPGqRSHgmtCs-ZuWgw__" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-  </div>
-
-  <div class="photo-gallery">
-    <h2>Your Photos</h2>
-    <img src="https://i.ibb.co/dwYRJcNn/a0aa7e091fff4634c2b64a40ea72b867.webp" alt="Photo 1">
-    <img src="https://i.ibb.co/vCKYq5c1/IMG-20250219-WA0026.jpg" alt="Photo 2">
-  </div>
-
-  <div class="birthday-card">
-    <h2>Birthday Card</h2>
-    <p>"May your day be filled with sunshine, smiles, and love!"</p>
-  </div>
-
-  <div class="memory-wall">
-    <h2>Memory Wall</h2>
-    <p>"Remember when we had that crazy fun trip?"</p>
-    <p>"You’re more than a friend, you're family."</p>
   </div>
 
   <script>
@@ -289,8 +233,8 @@
     }
 
     function updateCountdown() {
+      const birthday = new Date("2025-04-11T00:00:00");
       const now = new Date();
-      const birthday = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1); // Tomorrow
       const diff = birthday - now;
 
       const days = Math.floor(diff / (1000 * 60 * 60 * 24));
